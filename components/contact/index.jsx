@@ -1,4 +1,6 @@
 import Button from "../button"
+import Input from "../input"
+import Select from "../select"
 import Styles from "./contact.module.scss"
 
 const Contact = () => {
@@ -12,17 +14,16 @@ const Contact = () => {
             <div className={Styles.form}>
                 <h1>Fale com um especialista</h1>
                 <form>
-                <input type="text" placeholder="Nome completo" required/>
-                <input type="email" placeholder="E-mail profissional" required/>
-                <input type="number" placeholder="Celular/Whatsapp" pattern=" /^(?:\+)[0-9]{2}\s?(?:\()[0-9]{2}(?:\))\s?[0-9]{4,5}(?:-)[0-9]{4}$/" required/>
-                <input type="text" placeholder="Site" />
-                <select type="text" placeholder="Orçamento para mídia"> 
-                    <option>R$500 - R$2500</option>
-                    <option>R$2500 - R$10.000</option>
-                    <option>R$10.000 - R$50.000</option>
-                </select>
+                <Input type="text" placeholder="Nome completo" required/>
+                <Input type="email" placeholder="E-mail profissional" required/>
+                <Input type="number" placeholder="Celular/Whatsapp" pattern=" /^(?:\+)[0-9]{2}\s?(?:\()[0-9]{2}(?:\))\s?[0-9]{4,5}(?:-)[0-9]{4}$/" required/>
+                <Input type="text" placeholder="Site" />
+                <Select placeholder="Orçamento para mídia" options={[
+                    {label: "Instagram", value:"instagram"},
+                    {label: "Facebook", value:"facebook"}
+                ]} /> 
 
-                <Button title="Enviar" />
+                <Button title="Enviar" kind="full" />
                 </form>
             </div>
         </div>
