@@ -9,9 +9,9 @@ export default function Home(){
   return <div className="{styles.container}">
   <Header />
   <Welcome />
-  <Features />
+ {/* <Features />
   <Contact />
-  <Footer />
-  </div>
+  <Footer /> */}
+  </div> 
 }
 

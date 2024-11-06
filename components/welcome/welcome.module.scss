@@ -1,5 +1,7 @@
 @import "/styles/mixins/colors.scss";
 @import "/styles/mixins/padding.scss";
+@import "/styles/mixins/responsive.scss";
+@import "/styles/mixins/fonts.scss";
 
 .container {
     @include Padding;
@@ -8,21 +10,34 @@
     padding-top: 100px;
     background-image: url("./image/fundoWelcome.svg");
     background-repeat: no-repeat;
+    background-size: cover;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+
+    @include Phone {
+        grid-template-columns: 1fr;
+        grid-template-rows: max-content;
+    }
+
 }
 
 .text {
     h1 {
+        @include SizeTitle;
         font-weight: bold;
-        font-size: 71px;
     }
     p {
-        font-size: 30px;
+        @include SizeSubtitle;
         opacity: 0.7;
     }
 }
 
 .image {
     text-align: end;
+
+    @include Phone {
+        text-align: center;
+        grid-column: 1;
+        grid-row: 1;
+    }
 }

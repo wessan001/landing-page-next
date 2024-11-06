@@ -1,22 +1,44 @@
 @import "/styles/mixins/colors.scss";
 @import "/styles/mixins/padding.scss";
+@import "/styles/mixins/responsive.scss";
 
 .container {
-  @include Padding;
-    padding-top: 34px;
-    padding-bottom: 34px;
-    width: 100%;
-    background-color: $purple-color;
-    border-bottom: 0.5px solid $gray-color;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  @include Padding; //Mixin
+  color: $white-color; //Variable
+  padding-top: 34px;
+  padding-bottom: 34px;
+  width: 100%;
+  background-color: $purple-color;
+  border-bottom: 0.5px solid $gray-color;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-content: space-between;
+
+    @include Phone {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+
   }
 
 .menu {
   font-size: 22px;
-  color: white;
+  color: $white-color;
   a+a{
     margin-left: 38.9px;
+  }
+
+  @include Phone {
+    display: none;
+  }
+
+}
+
+.action {
+  text-align: end;
+
+  @include Phone {
+    display: none;
   }
 }
