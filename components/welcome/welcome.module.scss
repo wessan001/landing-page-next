@@ -34,7 +34,7 @@
     }
 }
 
-.button2 {
+.buttonWelcome {
     @include Phone {
         text-align: center;
     }
@@ -48,12 +48,6 @@
     text-align: end;
 
     @include Phone {
-        text-align: center;
-        grid-column: 1;
-        grid-row: 1;
-    }
-
-    @include MinPhone {
         text-align: center;
         grid-column: 1;
         grid-row: 1;

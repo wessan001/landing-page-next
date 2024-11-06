@@ -8,7 +8,7 @@ const Welcome = () => {
         <div className={Styles.text}>
             <h1>Melhor agência de marketing do Brasil</h1>
             <p>Somos uma agência de performance digital, aceleramos vendas e aquisição de leads para grandes marcas.</p>
-            <div className={Styles.button2}>
+            <div className={Styles.buttonWelcome}>
             <Button title="Aumentar vendas" kind="secundary" />
             </div>
         </div>

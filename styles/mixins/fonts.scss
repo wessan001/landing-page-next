@@ -7,10 +7,6 @@
         font-size: 50px;
         text-align: center;
     }
-
-    @include MinPhone {
-    font-size: 40px;
-    }
 }
 
 @mixin SizeSubtitle {
@@ -18,9 +14,5 @@
 
     @include Phone {
     font-size: 25px;
-    }
-
-    @include MinPhone {
-    font-size: 20px;
     }
 }
