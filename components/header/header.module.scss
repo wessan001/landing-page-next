@@ -18,6 +18,7 @@
     @include Phone {
       padding-top: 1rem;
       padding-bottom: 1rem;
+      border: none;
     }
 
   }
@@ -40,5 +41,11 @@
 
   @include Phone {
     display: none;
+  }
+}
+
+.logotipo {
+  @include Phone {
+    padding: 1rem;
   }
 }

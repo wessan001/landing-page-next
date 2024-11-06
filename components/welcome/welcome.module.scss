@@ -17,6 +17,7 @@
     @include Phone {
         grid-template-columns: 1fr;
         grid-template-rows: max-content;
+        background-image: none;
     }
 
 }
@@ -28,7 +29,18 @@
     }
     p {
         @include SizeSubtitle;
-        opacity: 0.7;
+        opacity: 0.8;
+        text-align: center;
+    }
+}
+
+.button2 {
+    @include Phone {
+        text-align: center;
+    }
+
+    Button {
+        font-size: 25px;
     }
 }
 
